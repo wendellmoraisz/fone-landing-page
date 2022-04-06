@@ -59,6 +59,40 @@ nav ul li {
     margin-top: 60px;
 }
 
+.product-slider {
+    position: absolute;
+    left: 2%;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-slider span {
+    width: 3px;
+    height: 60px;
+    margin: 40px 0;
+    background-color: #cfcece;
+}
+
+.product-slider .slide {
+    width: 8px;
+    height: 8px;
+    margin: 40px 0;
+    border-radius: 50%;
+    background-color: #cfcece;
+}
+
+.product-slider .slide-selected{
+    padding: 2px;
+    background-color: var(--primary-color);
+}
+
+.product-slider li a{
+    text-decoration: none;
+}
+
 .product-img {
     height: 100%;
 }
@@ -105,6 +139,11 @@ nav ul li {
     margin-left: 20px;
 }
 
+.product-price {
+    justify-content: space-between;
+    align-items: center;
+}
+
 .product-price p{
     font-size: 2em;
     font-weight: 700;
@@ -117,21 +156,18 @@ nav ul li {
     padding: 10px 30px;
     cursor: pointer;
     margin-right: 20px;
-    transition: background-color .4s ease;
+    transition: background-color .5s ease;
 }
 
 .product-price button:hover {
     background-color: #161616;
 }
 
-.product-price {
-    justify-content: space-between;
-}
-
 .aditional-info {
     margin: 100px;
     height: 70px;
     padding: 20px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,4 +184,64 @@ nav ul li {
 .aditional-info i {
     font-size: 1.5em;
     margin-right: 20px;
+}
+
+@media (max-width: 950px) {
+    .product-container {
+        flex-direction: column;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .aditional-info {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        margin: 100px 25px;
+    }
+    
+    .aditional-info div {
+        width: 300px;
+        margin: 10px 0;
+        justify-content: center;
+    }
+
+    .product-container .product-img {
+        height: 500px;
+        margin-bottom: 30px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .product-price {
+        justify-content: flex-start;
+    }
+
+    .product-price button {
+        margin-left: 15px;
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 570px){
+    .product-container {
+        padding: 0 10%;
+    }
+
+    nav {
+        justify-content: space-between;
+        padding: 20px ;
+    }
+}
+
+@media (max-width: 450px) {
+    .product-container .product-img {
+        height: 350px;
+    }
+
+    .product-info h1 {
+        font-size: 1.7em;
+    }
 }
